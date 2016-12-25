@@ -2,9 +2,17 @@ table{
 	
 	border:1px solid black;
 	width: 500px;
+
 	height: 500px;
 	
 	border-spacing: 10px;
+	/*position table to center of screen*/
+	margin-left: auto;
+   margin-right: auto;
+}
+div{
+	margin-left: auto;
+   margin-right: auto;
 }
 td{
 	border: 1px solid black;
@@ -25,8 +33,27 @@ td{
 }
 span{
 	font-size: 20px;
+
+
 }
 .boldPlayer{
 	font-weight: bold;
 	font-size: 30px;
+}
+
+
+body{
+	background: #fffc00; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fffc00 , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fffc00 , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media only screen and (max-width: 480px){
+	table{
+		width: 300px;
+
+	height: 300px;
+	}
+
+
 }

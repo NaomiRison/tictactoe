@@ -86,6 +86,7 @@ function playerWon(player){
 //return true if 3 squares belong to player
 function checksolution(player,solution){
 	//checks true if whole row , cloumn or diagonal belongs to player
+	//checks  3 boxes in each mini arrays
 	return squareBelongsToPlayer(player,solution[0])&&
 		squareBelongsToPlayer(player,solution[1])&&
 		squareBelongsToPlayer(player,solution[2])
@@ -98,8 +99,9 @@ function checksolution(player,solution){
 // does td, or square have class x or o?
 function squareBelongsToPlayer(player,index){
 	return $('td').eq(index).hasClass(player);
-	//does the  td have a class if so add
+	//does the  td have a class 
 	//player, is either O or X
+	// ex: does box 5 belong to player x
 }
 
 
