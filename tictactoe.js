@@ -1,5 +1,8 @@
 //user click to play Xs and Os
 var currentPlayer='X';
+var gamesLeft=3;
+var gamesWonX=0;
+var gamesWonO=0;
 $('.clear').click(function(){
 	$('td').removeClass('O X');
 	$('#playerx').removeClass('boldPlayer');
@@ -31,6 +34,8 @@ $('td').click(function(){
  			
  			if(playerWon('X')){
  				alert('X wins!');
+ 				gamesWonX++;
+ 				gamesLeft--;
  			}
  		}else{
  			$(this).addClass('O');
@@ -41,10 +46,15 @@ $('td').click(function(){
  			$('#playerx').removeClass('boldPlayer');
              if(playerWon('O')){
  				alert('O wins!');
+ 				gamesWonO++;
+ 				gamesLeft--;
  			}
  		}
- 		//where did they click?
-
+ 		if( gamesLeft===0){
+ 			alert(" player  X " +" won "+ gamesWonX+ " out of 3");
+ 			alert(" player  O " +" won "+ gamesWonO+ " out of 3");
+ 		}
+       
 });
 // nested array boxes counted from zero
 
