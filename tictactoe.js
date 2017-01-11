@@ -92,11 +92,13 @@ function playerWon(player){
 }
 
 
-//takes player, and solution
+//takes player, and mini arrays in solution[i]
 //return true if 3 squares belong to player
 function checksolution(player,solution){
 	//checks true if whole row , cloumn or diagonal belongs to player
 	//checks  3 boxes in each mini arrays
+	//solution[0], solution[1] and solution[2] is position 0,1,2 in
+	//all miniarrays that are row , cloumn or diagonal
 	return squareBelongsToPlayer(player,solution[0])&&
 		squareBelongsToPlayer(player,solution[1])&&
 		squareBelongsToPlayer(player,solution[2])

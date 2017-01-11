@@ -21,6 +21,10 @@ td{
 	text-align: center;
 	font-size: 72px;
 }
+#instructions{
+	font-size: 30px;
+	margin-top: 30px;
+}
 
 /*taking content of X and when we click X goes in where xclass is*/
 .X::before{
